@@ -1,0 +1,154 @@
+/* ===== Global ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #faf5ff; /* ungu muda lembut */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  color: #6a1b9a; /* ungu gelap */
+}
+
+/* ===== Custom Navbar Ungu ===== */
+.custom-navbar {
+  background: linear-gradient(90deg, #6a1b9a, #8e24aa, #ab47bc);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 10px 0;
+}
+
+.custom-navbar .navbar-brand {
+  color: #f3e5f5 !important;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.custom-navbar .nav-link {
+  color: #ede7f6 !important;
+  margin-right: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+/* Efek hover menu navbar */
+.custom-navbar .nav-link:hover {
+  color: #ffffff !important;  /* kuning keemasan */
+  font-weight: 600;
+  transform: scale(1.05);     /* efek sedikit membesar */
+  text-shadow: 0 0 5px rgba(255, 235, 59, 0.6); /* efek glow lembut */
+}
+
+
+.custom-navbar .nav-link:hover {
+  color: #ffffff !important;
+  transform: scale(1.05);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Tombol keranjang */
+.btn-cart {
+  background: #7b1fa2;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+.btn-cart:hover {
+  background: #9c27b0;
+  color: #fff;
+}
+
+/* ===== Jumbotron ===== */
+.jumbotron {
+  background: url("img/look.jpg") no-repeat center center;
+  background-size: cover;
+  height: 400px; /* bisa disesuaikan */
+  border-radius: 0; /* biar full rectangle */
+  position: relative;
+}
+
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  top: o; left: 0; right: 0; bottom: 0;
+  background: rgb(0, 0, 0); /* overlay gelap biar teks lebih jelas */
+  border-radius: 0;
+}
+
+.jumbotron h1 {
+  color: #ffffff; /* kuning emas */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /* biar lebih jelas */
+   text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,  
+    -1px  1px 0 #000,  
+     1px  1px 0 #000;
+}
+
+.jumbotron p {
+  color: #ffffff; /* putih */
+  font-weight: 500;
+   text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,  
+    -1px  1px 0 #000,  
+     1px  1px 0 #000;
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+  background-color: #8e24aa;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #ab47bc;
+}
+.btn-success {
+  background-color: #7b1fa2;
+  border: none;
+}
+.btn-success:hover {
+  background-color: #6a1b9a;
+}
+.btn-outline-primary {
+  border-color: #8e24aa;
+  color: #6a1b9a;
+}
+.btn-outline-primary:hover {
+  background-color: #8e24aa;
+  color: #fff;
+}
+
+/* ===== Cards ===== */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+.card-title {
+  color: #6a1b9a;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.gallery-container {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
