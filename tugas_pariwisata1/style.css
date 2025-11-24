@@ -1,0 +1,68 @@
+/* Pantai Arjuna Custom Styles */
+
+body {
+  background: #f0faff;
+}
+
+header {
+  background: linear-gradient(to right, #0077b6, #0096c7);
+}
+
+nav {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: #0077b6;
+  font-weight: 600;
+}
+nav a:hover {
+  color: #0096c7;
+}
+
+/* Banner */
+.banner-img {
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Paket Wisata */
+.package-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.package-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+.price-tag {
+  color: #028090;
+  font-weight: bold;
+}
+
+/* Gallery */
+.gallery-img {
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* Video section */
+.video-frame {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+
+/* Fix header subtitle contrast */
+header .text-gray-500 {
+  color: #e0faff !important;
+}
