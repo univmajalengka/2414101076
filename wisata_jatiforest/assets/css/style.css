@@ -1,0 +1,315 @@
+/* Palet Warna JatiForest */
+:root {
+    --color-primary: #006400; /* Forest Green Tua (Header, Table Header, Labels) */
+    --color-secondary: #228B22; /* Forest Green Sedang (Judul Paket) */
+    --color-accent: #DAA520; /* Goldenrod/Kuning Keemasan (Border, Hitung Button) */
+    --color-background: #F5F5DC; /* Beige/Krem Muda (Latar Belakang Body) */
+    --color-text: #333;
+    --color-light-bg: #fff;
+    --color-dark-bg: #2b2b2b;
+}
+
+/* --- Global & Typography --- */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden;
+}
+h1, h2, h3 {
+    color: var(--color-primary);
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: var(--color-dark-bg);
+    color: var(--color-light-bg);
+    padding: 15px 0;
+    border-bottom: 5px solid var(--color-accent);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 60px;
+}
+header h1 {
+    float: left;
+    margin: 0;
+    color: var(--color-light-bg);
+    font-size: 32px;
+}
+header nav {
+    float: right;
+    margin-top: 5px;
+}
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header li {
+    float: left;
+    display: inline;
+    padding: 0 15px;
+}
+header a {
+    color: var(--color-light-bg);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+header a:hover {
+    color: var(--color-accent);
+}
+
+/* --- Slideshow Styling --- */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+.mySlides {
+    display: none;
+}
+.mySlides img {
+    width: 100%;
+    height: 50vh;
+    min-height: 300px;
+    object-fit: cover;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* --- Paket Wisata Grid --- */
+.paket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    padding: 30px 0;
+}
+.paket-card {
+    background: var(--color-light-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.paket-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+.paket-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.paket-card-body {
+    padding: 20px;
+}
+.paket-card-body h3 {
+    margin-top: 0;
+    color: var(--color-secondary);
+    border-bottom: 1px dashed var(--color-background);
+    padding-bottom: 8px;
+    font-size: 1.3em;
+}
+.youtube-link iframe {
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* --- Tombol (Buttons) --- */
+.btn {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-light-bg);
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-right: 10px;
+}
+.btn:hover {
+    background: var(--color-secondary);
+    transform: translateY(-2px);
+}
+.btn[type="reset"] {
+    background-color: #dc3545;
+}
+.btn[type="reset"]:hover {
+    background-color: #a71d2a;
+}
+#hitung-btn {
+    background-color: var(--color-accent);
+}
+#hitung-btn:hover {
+    background-color: #c99e1c;
+}
+
+
+/* --- FORM STYLING (DIRAPIHKAN & Penyesuaian Layout Checkbox) --- */
+form {
+    background: var(--color-light-bg);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 25px;
+}
+.form-group > label { /* Menargetkan label utama (e.g., Nama Pemesan, Jumlah Peserta) */
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 1.1em;
+}
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[readonly] { 
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus:not([readonly]) {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 5px rgba(218, 165, 32, 0.5);
+    outline: none;
+}
+
+/* Styling khusus untuk input readonly (Harga dan Tagihan) */
+.form-group input[readonly] {
+    background-color: #f1f1f1;
+    font-weight: 700;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+/* PENYESUAIAN TATA LETAK CHECKBOX (Pelayanan Paket Perjalanan) */
+
+/* Menargetkan div yang membungkus setiap opsi (checkbox + label) */
+.form-group > div { 
+    display: flex; /* Mengaktifkan Flexbox agar sebaris */
+    align-items: center; /* Menjaga vertikal tetap sejajar */
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Styling untuk checkbox */
+.form-group input[type="checkbox"] {
+    margin-right: 10px; /* Jarak antara checkbox dan label */
+    transform: scale(1.3); /* Memperbesar checkbox */
+    cursor: pointer;
+}
+
+/* Styling untuk label checkbox */
+.form-group div label {
+    font-weight: normal; /* Menghilangkan font-weight 700 dari label utama */
+    color: var(--color-text); /* Menggunakan warna teks standar */
+    margin: 0; /* Menghilangkan margin bawaan */
+    cursor: pointer;
+}
+
+
+/* --- TABLE STYLING (DIRAPIHKAN) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: var(--color-light-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+th {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+tr:nth-child(even) {
+    background-color: #f6f6f6;
+}
+tr:hover {
+    background-color: #e8e8e8;
+}
+
+.edit-btn, .delete-btn {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px; 
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.edit-btn { 
+    background-color: #007bff;
+    color: white; 
+}
+.edit-btn:hover { 
+    background-color: #0056b3; 
+}
+.delete-btn { 
+    background-color: #dc3545;
+    color: white; 
+}
+.delete-btn:hover { 
+    background-color: #a71d2a; 
+}
+
+/* --- Utility / Footer (Dirapihkan) --- */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+footer {
+    background: var(--color-dark-bg);
+    color: #bbb;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+    text-align: center;
+}
+footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
